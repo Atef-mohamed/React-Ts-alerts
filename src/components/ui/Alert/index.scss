@@ -1,0 +1,46 @@
+// Variable
+$errorborder:rgba(255,25,0,0.322);
+$errorBg:rgb(192 29 29 / 15%);
+$errorcolor:#ef8d8dfa;
+// Info
+$infoborder:#646cff;
+$infoBg:rgb(100 108 255 / 8%);
+$infocolor:#bcc0ff;
+
+@mixin alert($name,$borderColor,$bgColor,$color){
+    .#{$name}{
+        border:2px dotted $borderColor;
+        border-radius: 0.8rem;
+        padding: 1.3rem;
+        background-color: $bgColor;
+        color: $color;
+        margin-bottom: 1rem;
+        .alert-header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+    
+            .alert-title{
+                display: flex;
+                align-items: center;
+                font-size: 1.2rem;
+            }
+            span svg{
+                margin-right: 0.6rem;
+            }
+        }
+    
+        p{
+            font-size: 0.9rem;
+            font-weight: 500;
+            line-height: 1.5rem;
+            margin-top: 1.2rem;
+        }
+        .close{
+            cursor: pointer;
+        }
+    }
+}
+
+@include alert("alert-danger",$errorborder ,$errorBg ,$errorcolor );
+@include alert("alert-info",$infoborder ,$infoBg ,$infocolor );
