@@ -1,4 +1,4 @@
-import { BellRing } from "lucide-react";
+import { BellRing, Info } from "lucide-react";
 import "./App.css";
 import Alert from "./components/ui/Alert/Alert";
 
@@ -9,7 +9,7 @@ function App() {
         <Alert
           type="alert-danger"
           icon={<BellRing size={20} />}
-          alertTitle="Alert title"
+          alertTitle="something come wrong"
           description=" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet
           architecto deserunt, veritatis nobis sequi doloremque? Magni non
           tempore ipsum atque."
@@ -19,8 +19,8 @@ function App() {
         
         <Alert
           type="alert-info"
-          icon={<BellRing size={20} />}
-          alertTitle="Alert title"
+          icon={<Info size={20} />}
+          alertTitle="Info Alert"
           description=" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet
           architecto deserunt, veritatis nobis sequi doloremque? Magni non
           tempore ipsum atque."
